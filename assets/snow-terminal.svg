@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 372" width="900" height="372" role="img" aria-label="Terminal session: whoami — Tushar Saharan, full-stack developer and AI engineer; focus — agentic AI, retrieval, interfaces that feel alive; work — jobly, needspeak, civic-pulse, resume-parser">
+  <title>tushar@alpine — a snowy terminal</title>
+
+  <defs>
+    <clipPath id="frame">
+      <rect x="1" y="1" width="898" height="370" rx="14"/>
+    </clipPath>
+
+    <clipPath id="body">
+      <rect x="1" y="40" width="898" height="331"/>
+    </clipPath>
+
+    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%"   stop-color="#0d1620"/>
+      <stop offset="100%" stop-color="#080f18"/>
+    </linearGradient>
+
+    <linearGradient id="barG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#16283a"/>
+      <stop offset="100%" stop-color="#101d2b"/>
+    </linearGradient>
+
+    <linearGradient id="driftG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dbe7f0" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#dbe7f0" stop-opacity=".12"/>
+    </linearGradient>
+
+    <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#a9c7dd" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#a9c7dd" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- one reusable snowflake -->
+    <g id="flake">
+      <circle r="1.6" fill="#dbe7f0"/>
+    </g>
+  </defs>
+
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+
+    .cmd  { font-size: 15px; fill: #f2f7fb; }
+    .usr  { fill: #a9c7dd; }
+    .pth  { fill: #f4dcaa; }
+    .sig  { fill: #5c7d97; }
+    .out  { font-size: 14.5px; fill: #7f9db6; }
+    .hl   { fill: #dbe7f0; }
+    .bar  { font-size: 12px; fill: #7f9db6; letter-spacing: 2px; }
+
+    /* --- typing --- */
+    .type { width: 0; }
+    @keyframes type { to { width: 880px; } }
+    .t1 { animation: type 1.0s steps(26, end) 0.5s forwards; }
+    .t2 { animation: type 1.0s steps(26, end) 2.1s forwards; }
+    .t3 { animation: type 1.0s steps(26, end) 3.7s forwards; }
+    .t4 { animation: type 0.7s steps(18, end) 5.3s forwards; }
+
+    /* --- output reveal --- */
+    .out-g { opacity: 0; }
+    @keyframes emerge { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .o1 { animation: emerge .55s ease-out 1.60s forwards; }
+    .o2 { animation: emerge .55s ease-out 3.20s forwards; }
+    .o3 { animation: emerge .55s ease-out 4.80s forwards; }
+
+    /* --- caret --- */
+    .caret { opacity: 0; fill: #a9c7dd; }
+    @keyframes blink { 0%, 45% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .caret { animation: blink 1.05s step-end 6.0s infinite; }
+
+    /* --- snow --- */
+    .fall { animation: fall linear infinite; }
+    @keyframes fall { from { transform: translateY(-16px); } to { transform: translateY(348px); } }
+    .sway { animation: sway 3.4s ease-in-out infinite alternate; }
+    @keyframes sway { from { transform: translateX(-7px); } to { transform: translateX(7px); } }
+
+    /* --- frost breathing --- */
+    .frost { animation: breathe 7s ease-in-out infinite alternate; }
+    @keyframes breathe { from { opacity: .5; } to { opacity: .85; } }
+
+    .glow { animation: breathe2 6s ease-in-out infinite alternate; }
+    @keyframes breathe2 { from { opacity: .7; } to { opacity: 1; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .type { animation: none; width: 880px; }
+      .out-g { animation: none; opacity: 1; }
+      .caret { animation: none; opacity: 1; }
+      .fall, .sway, .frost, .glow { animation: none; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <!-- window -->
+    <rect x="0" y="0" width="900" height="372" fill="url(#bg)"/>
+
+    <!-- faint ridge watermark behind the text -->
+    <g opacity=".5">
+      <path d="M0,372 L0,300 L120,262 L210,296 L320,240 L410,286 L520,250 L620,292 L730,246 L830,288 L900,262 L900,372 Z" fill="#101d2b"/>
+      <path d="M0,372 L0,330 L140,308 L280,330 L420,306 L560,332 L700,308 L840,330 L900,318 L900,372 Z" fill="#0c1420"/>
+    </g>
+
+    <!-- soft lamp glow, upper right -->
+    <circle class="glow" cx="770" cy="120" r="200" fill="url(#lamp)"/>
+
+    <!-- snow inside the window -->
+    <g clip-path="url(#body)" aria-hidden="true">
+      <g class="fall" style="animation-duration: 11s;   animation-delay: -1s"  transform="translate(70,40)">  <g class="sway" style="animation-duration: 3.1s"><use href="#flake" opacity=".55"/></g></g>
+      <g class="fall" style="animation-duration: 14s;   animation-delay: -4s"  transform="translate(160,40)"> <g class="sway" style="animation-duration: 4.2s"><use href="#flake" opacity=".38" transform="scale(1.3)"/></g></g>
+      <g class="fall" style="animation-duration: 9.5s;  animation-delay: -7s"  transform="translate(255,40)"> <g class="sway" style="animation-duration: 2.8s"><use href="#flake" opacity=".6"/></g></g>
+      <g class="fall" style="animation-duration: 16s;   animation-delay: -2s"  transform="translate(345,40)"> <g class="sway" style="animation-duration: 4.8s"><use href="#flake" opacity=".3" transform="scale(1.5)"/></g></g>
+      <g class="fall" style="animation-duration: 12s;   animation-delay: -9s"  transform="translate(430,40)"> <g class="sway" style="animation-duration: 3.6s"><use href="#flake" opacity=".5"/></g></g>
+      <g class="fall" style="animation-duration: 10s;   animation-delay: -5s"  transform="translate(520,40)"> <g class="sway" style="animation-duration: 3.3s"><use href="#flake" opacity=".45"/></g></g>
+      <g class="fall" style="animation-duration: 15s;   animation-delay: -11s" transform="translate(610,40)"> <g class="sway" style="animation-duration: 4.5s"><use href="#flake" opacity=".34" transform="scale(1.35)"/></g></g>
+      <g class="fall" style="animation-duration: 11.5s; animation-delay: -3s"  transform="translate(690,40)"> <g class="sway" style="animation-duration: 3.9s"><use href="#flake" opacity=".55"/></g></g>
+      <g class="fall" style="animation-duration: 13s;   animation-delay: -8s"  transform="translate(775,40)"> <g class="sway" style="animation-duration: 3.0s"><use href="#flake" opacity=".42"/></g></g>
+      <g class="fall" style="animation-duration: 9s;    animation-delay: -6s"  transform="translate(850,40)"> <g class="sway" style="animation-duration: 4.0s"><use href="#flake" opacity=".5"/></g></g>
+
+      <!-- settled snow along the bottom sill -->
+      <path d="M0,372 L0,352 Q60,344 120,350 Q190,357 250,348 Q320,339 390,349 Q460,357 530,347 Q600,338 670,348 Q740,356 810,347 Q860,341 900,348 L900,372 Z" fill="url(#driftG)"/>
+    </g>
+
+    <!-- title bar -->
+    <rect x="0" y="0" width="900" height="40" fill="url(#barG)"/>
+    <rect x="0" y="39.5" width="900" height="1" fill="#a9c7dd" opacity=".18"/>
+
+    <!-- traffic lights, alpine tones -->
+    <circle cx="24" cy="20" r="5" fill="#3f5a72"/>
+    <circle cx="42" cy="20" r="5" fill="#5c7d97"/>
+    <circle cx="60" cy="20" r="5" fill="#7f9db6"/>
+
+    <text class="bar" x="450" y="24" text-anchor="middle">tushar@alpine</text>
+
+    <!-- frost clinging under the title bar -->
+    <g class="frost" fill="#dbe7f0" opacity=".6" aria-hidden="true">
+      <path d="M96,40 q10,7 22,0 z" opacity=".5"/>
+      <path d="M150,40 q14,10 30,0 z" opacity=".35"/>
+      <path d="M228,40 q9,6 20,0 z" opacity=".45"/>
+      <path d="M640,40 q12,8 26,0 z" opacity=".4"/>
+      <path d="M712,40 q9,6 20,0 z" opacity=".5"/>
+      <path d="M790,40 q14,9 30,0 z" opacity=".3"/>
+      <circle cx="330" cy="41" r="2" opacity=".4"/>
+      <circle cx="560" cy="41" r="2.4" opacity=".35"/>
+    </g>
+
+    <!-- ── line 1 ── -->
+    <g clip-path="url(#l1)">
+      <text class="cmd" x="28" y="88"><tspan class="usr">tushar@alpine</tspan> <tspan class="pth">~</tspan> <tspan class="sig">$</tspan> whoami</text>
+    </g>
+    <g class="out-g o1">
+      <text class="out" x="46" y="114"><tspan class="sig">→</tspan> <tspan class="hl">Tushar Saharan</tspan> · full-stack developer, AI engineer</text>
+    </g>
+
+    <!-- ── line 2 ── -->
+    <g clip-path="url(#l2)">
+      <text class="cmd" x="28" y="164"><tspan class="usr">tushar@alpine</tspan> <tspan class="pth">~</tspan> <tspan class="sig">$</tspan> cat focus.txt</text>
+    </g>
+    <g class="out-g o2">
+      <text class="out" x="46" y="190"><tspan class="sig">→</tspan> <tspan class="hl">agentic AI</tspan> · retrieval · interfaces that feel alive</text>
+    </g>
+
+    <!-- ── line 3 ── -->
+    <g clip-path="url(#l3)">
+      <text class="cmd" x="28" y="240"><tspan class="usr">tushar@alpine</tspan> <tspan class="pth">~</tspan> <tspan class="sig">$</tspan> ls work/</text>
+    </g>
+    <g class="out-g o3">
+      <text class="out" x="46" y="266"><tspan class="sig">→</tspan> <tspan class="hl">jobly</tspan>  <tspan class="hl">needspeak</tspan>  <tspan class="hl">civic-pulse</tspan>  <tspan class="hl">resume-parser</tspan></text>
+    </g>
+
+    <!-- ── waiting prompt ── -->
+    <g clip-path="url(#l4)">
+      <text class="cmd" x="28" y="316"><tspan class="usr">tushar@alpine</tspan> <tspan class="pth">~</tspan> <tspan class="sig">$</tspan></text>
+    </g>
+    <rect class="caret" x="185" y="304" width="9" height="16"/>
+
+    <!-- window border -->
+    <rect x="1" y="1" width="898" height="370" rx="14" fill="none" stroke="#1c2f42" stroke-width="1.5"/>
+  </g>
+
+  <!-- typing clips, declared after use so the animated rects sit in the same doc -->
+  <defs>
+    <clipPath id="l1" clipPathUnits="userSpaceOnUse"><rect class="type t1" x="24" y="70"  height="26"/></clipPath>
+    <clipPath id="l2" clipPathUnits="userSpaceOnUse"><rect class="type t2" x="24" y="146" height="26"/></clipPath>
+    <clipPath id="l3" clipPathUnits="userSpaceOnUse"><rect class="type t3" x="24" y="222" height="26"/></clipPath>
+    <clipPath id="l4" clipPathUnits="userSpaceOnUse"><rect class="type t4" x="24" y="298" height="26"/></clipPath>
+  </defs>
+</svg>
