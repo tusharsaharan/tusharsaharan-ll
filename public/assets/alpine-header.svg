@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Tushar Saharan — Full-Stack Developer and AI Engineer. An animated alpine ridgeline at dawn.">
+  <title>Tushar Saharan — Full-Stack Developer &amp; AI Engineer</title>
+
+  <style>
+    .t { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+
+    @keyframes twinkle { 0%,100% { opacity:.15 } 50% { opacity:.9 } }
+    @keyframes drift   { 0% { transform: translateX(-40px) } 100% { transform: translateX(40px) } }
+    @keyframes driftb  { 0% { transform: translateX(30px) }  100% { transform: translateX(-30px) } }
+    @keyframes float1  { 0%,100% { transform: translateY(0) }      50% { transform: translateY(-4px) } }
+    @keyframes float2  { 0%,100% { transform: translateY(0) }      50% { transform: translateY(-2px) } }
+    @keyframes glow    { 0%,100% { opacity:.45 } 50% { opacity:.85 } }
+    @keyframes rise    { 0% { transform: translateY(16px); opacity:0 } 100% { transform: translateY(0); opacity:1 } }
+    @keyframes fall    { 0% { transform: translateY(-20px); opacity:0 } 12% { opacity:.9 } 100% { transform: translateY(360px); opacity:0 } }
+    @keyframes sweep   { 0% { transform: translateX(-320px) } 100% { transform: translateX(1240px) } }
+    @keyframes flap    { 0%,100% { transform: scaleY(1) } 50% { transform: scaleY(.35) } }
+    @keyframes wipe    { 0% { width:0 } 100% { width:520px } }
+
+    .star  { fill:#dbe7f0; animation: twinkle 4s ease-in-out infinite }
+    .cloud { animation: drift 26s ease-in-out infinite alternate }
+    .cloud2{ animation: driftb 34s ease-in-out infinite alternate }
+    .far   { animation: float1 14s ease-in-out infinite }
+    .mid   { animation: float2 11s ease-in-out infinite }
+    .sun   { animation: glow 6s ease-in-out infinite }
+    .flake { animation: fall linear infinite }
+    .bird  { animation: flap 0.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center }
+    .ttl   { animation: rise 1.1s cubic-bezier(.2,.7,.2,1) both }
+    .sub   { animation: rise 1.1s cubic-bezier(.2,.7,.2,1) .22s both }
+    .tag   { animation: rise 1.1s cubic-bezier(.2,.7,.2,1) .4s both }
+    .rule  { animation: wipe 1.4s cubic-bezier(.2,.7,.2,1) .5s both }
+    .shine { animation: sweep 9s linear infinite }
+
+    @media (prefers-reduced-motion: reduce) {
+      .star,.cloud,.cloud2,.far,.mid,.sun,.flake,.bird,.shine { animation: none }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#070d16"/>
+      <stop offset="45%"  stop-color="#0e1a27"/>
+      <stop offset="78%"  stop-color="#1a2b3c"/>
+      <stop offset="100%" stop-color="#243a4e"/>
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f4dcaa" stop-opacity=".55"/>
+      <stop offset="55%"  stop-color="#c9a86f" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#c9a86f" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a9c7dd" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#a9c7dd" stop-opacity=".22"/>
+    </linearGradient>
+
+    <linearGradient id="shineG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#dbe7f0" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#dbe7f0" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#dbe7f0" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="card"><rect x="0" y="0" width="1200" height="340" rx="16"/></clipPath>
+
+    <path id="farRidge" d="M0,340 L0,254 L90,222 L150,242 L240,196 L320,240 L400,214 L470,246 L560,206 L640,248 L720,220 L800,250 L880,212 L960,246 L1050,222 L1130,250 L1200,234 L1200,340 Z"/>
+    <path id="midRidge" d="M0,340 L0,286 L110,258 L200,286 L300,240 L390,280 L500,252 L590,288 L700,246 L790,282 L900,262 L1010,290 L1110,268 L1200,290 L1200,340 Z"/>
+
+    <clipPath id="farClip"><use href="#farRidge"/></clipPath>
+    <clipPath id="midClip"><use href="#midRidge"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="340" fill="url(#sky)"/>
+
+    <!-- stars -->
+    <g>
+      <circle class="star" cx="70"   cy="42"  r="1.3" style="animation-delay:.2s"/>
+      <circle class="star" cx="148"  cy="88"  r="1"   style="animation-delay:1.4s"/>
+      <circle class="star" cx="232"  cy="34"  r="1.5" style="animation-delay:.7s"/>
+      <circle class="star" cx="318"  cy="72"  r="1"   style="animation-delay:2.1s"/>
+      <circle class="star" cx="402"  cy="30"  r="1.2" style="animation-delay:1.1s"/>
+      <circle class="star" cx="486"  cy="96"  r="1"   style="animation-delay:3s"/>
+      <circle class="star" cx="574"  cy="46"  r="1.4" style="animation-delay:.4s"/>
+      <circle class="star" cx="662"  cy="26"  r="1"   style="animation-delay:2.6s"/>
+      <circle class="star" cx="742"  cy="84"  r="1.2" style="animation-delay:1.8s"/>
+      <circle class="star" cx="826"  cy="38"  r="1"   style="animation-delay:.9s"/>
+      <circle class="star" cx="906"  cy="74"  r="1.5" style="animation-delay:2.3s"/>
+      <circle class="star" cx="988"  cy="30"  r="1"   style="animation-delay:1.6s"/>
+      <circle class="star" cx="1064" cy="86"  r="1.2" style="animation-delay:.6s"/>
+      <circle class="star" cx="1142" cy="48"  r="1"   style="animation-delay:2.8s"/>
+      <circle class="star" cx="1180" cy="110" r="1.3" style="animation-delay:1.2s"/>
+      <circle class="star" cx="34"   cy="120" r="1"   style="animation-delay:3.3s"/>
+    </g>
+
+    <!-- cold dawn light behind the ridge -->
+    <g class="sun">
+      <circle cx="880" cy="248" r="190" fill="url(#sunGlow)"/>
+      <circle cx="880" cy="248" r="26"  fill="#f4dcaa" opacity=".28"/>
+    </g>
+
+    <!-- high cloud bands -->
+    <g class="cloud" opacity=".16">
+      <rect x="-60" y="196" width="560" height="5" rx="2.5" fill="#a9c7dd"/>
+      <rect x="120"  y="212" width="320" height="4" rx="2" fill="#a9c7dd"/>
+    </g>
+    <g class="cloud2" opacity=".12">
+      <rect x="700" y="190" width="520" height="5" rx="2.5" fill="#a9c7dd"/>
+      <rect x="820" y="210" width="300" height="4" rx="2" fill="#a9c7dd"/>
+    </g>
+
+    <!-- birds -->
+    <g opacity=".55">
+      <g class="bird">
+        <path d="M0,0 q7,-6 14,0 q-7,-2 -14,0" fill="#dbe7f0"/>
+        <animateMotion dur="22s" repeatCount="indefinite" path="M-40,214 C260,186 620,230 1260,192"/>
+      </g>
+      <g class="bird" style="animation-delay:.18s">
+        <path d="M0,0 q5,-4 10,0 q-5,-1.5 -10,0" fill="#dbe7f0"/>
+        <animateMotion dur="22s" begin="1.6s" repeatCount="indefinite" path="M-40,232 C260,206 620,248 1260,210"/>
+      </g>
+    </g>
+
+    <!-- far ridge -->
+    <g class="far">
+      <use href="#farRidge" fill="#2c4258"/>
+      <g clip-path="url(#farClip)">
+        <rect x="0" y="0" width="1200" height="232" fill="#dbe7f0" opacity=".82"/>
+        <rect x="0" y="232" width="1200" height="10" fill="#dbe7f0" opacity=".28"/>
+      </g>
+    </g>
+
+    <!-- mid ridge -->
+    <g class="mid">
+      <use href="#midRidge" fill="#1c2f42"/>
+      <g clip-path="url(#midClip)">
+        <rect x="0" y="0" width="1200" height="266" fill="#a9c7dd" opacity=".34"/>
+      </g>
+    </g>
+
+    <!-- valley mist -->
+    <rect x="0" y="268" width="1200" height="72" fill="url(#mist)"/>
+
+    <!-- near ridge -->
+    <path d="M0,340 L0,314 L120,300 L260,320 L380,304 L520,324 L660,306 L800,320 L940,302 L1080,320 L1200,308 L1200,340 Z" fill="#0d1620"/>
+
+    <!-- pines on the near ridge -->
+    <g fill="#0a1118">
+      <path d="M96,304 l7,17 h-14 z"/>
+      <path d="M118,300 l8,21 h-16 z"/>
+      <path d="M142,303 l6,18 h-12 z"/>
+      <path d="M1046,314 l7,17 h-14 z"/>
+      <path d="M1072,310 l8,21 h-16 z"/>
+      <path d="M1098,315 l6,16 h-12 z"/>
+    </g>
+
+    <!-- snowfall -->
+    <g fill="#dbe7f0">
+      <circle class="flake" cx="60"   cy="0" r="1.6" opacity=".7" style="animation-duration:11s; animation-delay:0s"/>
+      <circle class="flake" cx="180"  cy="0" r="1.2" opacity=".6" style="animation-duration:14s; animation-delay:2s"/>
+      <circle class="flake" cx="300"  cy="0" r="1.8" opacity=".5" style="animation-duration:9s;  animation-delay:4s"/>
+      <circle class="flake" cx="430"  cy="0" r="1.3" opacity=".7" style="animation-duration:13s; animation-delay:1s"/>
+      <circle class="flake" cx="560"  cy="0" r="1.5" opacity=".55" style="animation-duration:16s; animation-delay:5s"/>
+      <circle class="flake" cx="690"  cy="0" r="1.2" opacity=".6" style="animation-duration:10s; animation-delay:3s"/>
+      <circle class="flake" cx="820"  cy="0" r="1.7" opacity=".5" style="animation-duration:15s; animation-delay:6s"/>
+      <circle class="flake" cx="950"  cy="0" r="1.3" opacity=".65" style="animation-duration:12s; animation-delay:1.5s"/>
+      <circle class="flake" cx="1080" cy="0" r="1.5" opacity=".55" style="animation-duration:17s; animation-delay:4.5s"/>
+      <circle class="flake" cx="1160" cy="0" r="1.2" opacity=".6" style="animation-duration:11s; animation-delay:7s"/>
+    </g>
+
+    <!-- title -->
+    <g class="t" text-anchor="middle">
+      <text class="ttl" x="600" y="108" fill="#f2f7fb" font-size="52" font-weight="700" letter-spacing="14">TUSHAR SAHARAN</text>
+      <text class="sub" x="600" y="152" fill="#a9c7dd" font-size="16" font-weight="500" letter-spacing="5">FULL-STACK DEVELOPER  ·  AI ENGINEER</text>
+      <text class="tag" x="600" y="180" fill="#7f9db6" font-size="12" letter-spacing="3.2">IIIT ALLAHABAD  ·  BUILDING AT ALTITUDE</text>
+    </g>
+
+    <!-- hairline under the wordmark with a travelling glint -->
+    <g>
+      <rect class="rule" x="340" y="128" height="1" fill="#a9c7dd" opacity=".35"/>
+      <g clip-path="url(#card)">
+        <rect class="shine" x="0" y="127" width="320" height="2" fill="url(#shineG)"/>
+      </g>
+    </g>
+
+    <rect x=".5" y=".5" width="1199" height="339" rx="16" fill="none" stroke="#a9c7dd" stroke-opacity=".14"/>
+  </g>
+</svg>

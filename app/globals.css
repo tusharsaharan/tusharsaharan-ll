@@ -153,6 +153,36 @@
   }
 }
 
+/* Alpine palette: night navy, slate ridge, ice blue, snow, warm dawn */
+:root {
+  color-scheme: dark;
+  --background: #070d16;
+  --foreground: #f2f7fb;
+  --card: #0d1620;
+  --card-foreground: #f2f7fb;
+  --popover: #0d1620;
+  --popover-foreground: #f2f7fb;
+  --primary: #a9c7dd;
+  --primary-foreground: #070d16;
+  --secondary: #1c2f42;
+  --secondary-foreground: #f2f7fb;
+  --muted: #12202e;
+  --muted-foreground: #7f9db6;
+  --accent: #1c2f42;
+  --accent-foreground: #dbe7f0;
+  --border: #1c2f42;
+  --input: #1c2f42;
+  --ring: #a9c7dd;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-dawn: #f4dcaa;
+  --color-ice: #a9c7dd;
+  --color-snow: #dbe7f0;
+  --font-sans: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, sans-serif;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
